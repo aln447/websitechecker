@@ -9,4 +9,9 @@ exports.handler = function(event, context, callback) {
             body: JSON.stringify({message}),
         })
     }
+
+    const sendMessage = (isFound) => {
+        send(isFound ? 'EXISTS' : 'DOESN\'T EXIST');
+    }
+
 }
