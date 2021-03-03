@@ -4,7 +4,8 @@
   "description": "A small lambda meant to check some websites",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lambda-serve": "netlify-lambda serve functions",
+    "lambda-build": "netlify-lambda build functions"
   },
   "author": "",
   "license": "ISC",
