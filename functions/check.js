@@ -14,4 +14,9 @@ exports.handler = function(event, context, callback) {
         send(isFound ? 'EXISTS' : 'DOESN\'T EXIST');
     }
 
+    const checkAnUrl = (url) => {
+        axios.get(url)
+            .then(() => sendMessage(true))
+            .catch(() => sendMessage(false));
+    }
 }
