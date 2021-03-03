@@ -19,4 +19,8 @@ exports.handler = function(event, context, callback) {
             .then(() => sendMessage(true))
             .catch(() => sendMessage(false));
     }
+
+    if(event.httpMethod === 'GET') {
+        checkAnUrl(url);
+    }
 }
