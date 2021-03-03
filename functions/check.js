@@ -20,6 +20,10 @@ exports.handler = function(event, context, callback) {
             .catch(() => sendMessage(false));
     }
 
+    if (!url) {
+        send('Maybe pass the url first, hmm?')
+    }
+
     if(event.httpMethod === 'GET') {
         checkAnUrl(url);
     } else {
