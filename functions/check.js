@@ -22,5 +22,7 @@ exports.handler = function(event, context, callback) {
 
     if(event.httpMethod === 'GET') {
         checkAnUrl(url);
+    } else {
+        send('BAD METHOD, PAL');
     }
 }
